@@ -5,18 +5,18 @@ using DuckSwim.behaviors;
 
 namespace DuckSwim
 {
-    class WoodenDuck : Duck
+    class RoastDuck : Duck
     {
-        public WoodenDuck() : base()
+        public RoastDuck() : base()
         {
             flyBehavior = new FlyNoWay();
             quackBehavior = new MuteQuack();
-            swimBehavior = new SurfaceSwim();
+            swimBehavior = new Sink();
         }
 
         public override void Display()
         {
-            Console.WriteLine("WoodenDuck display");
+            Console.WriteLine("RoastDuck display");
         }
     }
 }
