@@ -9,6 +9,7 @@ namespace DuckSwim
     {
         protected IFlyable flyBehavior;
         protected IQuackable quackBehavior;
+        protected ISwimmable swimBehavior;
 
         public void PerformQuack()
         {
@@ -20,11 +21,12 @@ namespace DuckSwim
             flyBehavior.Fly();
         }
 
-        public abstract void Display();
-        public void Swim() 
+        public void PerformSwim()
         {
-            Console.WriteLine("All ducks float, even decoys!");        
+            swimBehavior.Swim();
         }
+
+        public abstract void Display();       
         
     }
 }

@@ -11,6 +11,7 @@ namespace DuckSwim
         {
             flyBehavior = new FlyWithWings();
             quackBehavior = new Quackle();
+            swimBehavior = new SimpleSwim();
         }
 
         public override void Display()
