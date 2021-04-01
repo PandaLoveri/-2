@@ -23,6 +23,10 @@ namespace StarBuzz
             beverage3 = new Mocha(beverage3);
             beverage3 = new Whip(beverage3);
             Console.WriteLine(beverage3.getDescription() + " $" + beverage3.cost());
+
+            Beverage beverage4 = new IceTea();
+            beverage4 = new Сaramel(beverage4);
+            Console.WriteLine(beverage4.getDescription() + " $" + beverage4.cost());
         }
     }
 }
