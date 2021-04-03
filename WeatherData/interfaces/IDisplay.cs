@@ -6,6 +6,6 @@ namespace WeatherData.interfaces
 {
     public interface IDisplay
     {
-        public void display();
+        public void Display();
     }
 }

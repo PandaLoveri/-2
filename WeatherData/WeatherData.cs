@@ -8,21 +8,20 @@ namespace WeatherData
     public class WeatherData :ISubject
     {
         private List<IObserver> observers;
-        private float temperature;
-        private float humidity;
-        private float pressure;
+        private Data data;
 
         public WeatherData()
         {
             observers = new List<IObserver>();
+            data = new Data();
         }
 
-        public void registerObserver(IObserver o)
+        public void RegisterObserver(IObserver o)
         {
             observers.Add(o);
         }
 
-        public void removeObserver(IObserver o)
+        public void RemoveObserver(IObserver o)
         {
             int removeIndex = observers.IndexOf(o);
             if (removeIndex >= 0)
@@ -31,25 +30,23 @@ namespace WeatherData
             }
         }
 
-        public void notifyObservers()
+        public void NotifyObservers()
         {
             foreach (IObserver observer in observers)
             {
-                observer.update(temperature, humidity, pressure);
+                observer.Update(this.data);
             }           
         }
 
-        public void measurementsChanged()
+        public void MeasurementsChanged()
         {
-            notifyObservers();
+            NotifyObservers();
         }
 
-        public void setMeasurements(float temperature, float humidity, float pressure)
+        public void SetMeasurements(float temperature, float humidity, float pressure, float oxygen_percentage, float precipitation, bool is_fog)
         {
-            this.temperature = temperature;
-            this.humidity = humidity;
-            this.pressure = pressure;
-            measurementsChanged();
+            this.data.SetMeasurements(temperature, humidity, pressure, oxygen_percentage, precipitation, is_fog);
+            MeasurementsChanged();
         }
     }
 }

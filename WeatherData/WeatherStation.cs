@@ -12,9 +12,9 @@ namespace WeatherData
 
             CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
 
-            weatherData.setMeasurements(80, 65, 30);
-            weatherData.setMeasurements(90, 75, 10);
-            weatherData.setMeasurements(60, 25, 40);
+            weatherData.SetMeasurements(80, 65, 30, 25, 20, true);
+            weatherData.SetMeasurements(90, 75, 10, 35, 20, false);
+            weatherData.SetMeasurements(60, 25, 40, 5, 20, true);
         }
     }
 }

@@ -7,26 +7,24 @@ namespace WeatherData
 {
     public class CurrentConditionsDisplay: IObserver, IDisplay
     {
-        private float temperature;
-        private float humidity;
+        private Data data;
         private ISubject weatherData;
 
         public CurrentConditionsDisplay(ISubject weatherData)
         {
             this.weatherData = weatherData;
-            weatherData.registerObserver(this);
+            weatherData.RegisterObserver(this);
         }
 
-        public void display()
-        {            
-            Console.WriteLine($"Сейчас на улице { this.temperature} градусов и { this.humidity} процентов влажности");
-        }
-
-        public void update(float temperature, float humidity, float pressure)
+        public void Display()
         {
-            this.temperature = temperature;
-            this.humidity = humidity;
-            display();
+            this.data.Display();
+        }
+
+        public void Update(Data data)
+        {
+            this.data = data;
+            Display();
         }
 
     }

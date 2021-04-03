@@ -6,6 +6,6 @@ namespace WeatherData.interfaces
 {
     public interface IObserver
     {
-        public void update(float temp, float humanity, float pressure);
+        public void Update(Data data);
     }
 }
