@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StarBuzz
 {
-    public abstract class CondinmentDecorator: Beverage
+    public abstract class CondimentDecorator: Beverage
     {
         public abstract override string getDescription();
     }

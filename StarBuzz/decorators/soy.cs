@@ -4,9 +4,9 @@ using System.Text;
 
 namespace StarBuzz.decorators
 {
-    class Soy:CondinmentDecorator
+    class Soy:CondimentDecorator
     {
-        Beverage beverage;
+        private Beverage beverage;
 
         public Soy(Beverage beverage)
         {

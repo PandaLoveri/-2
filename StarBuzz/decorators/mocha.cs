@@ -4,9 +4,9 @@ using System.Text;
 
 namespace StarBuzz.decorators
 {
-    public class Mocha: CondinmentDecorator
+    class Mocha: CondimentDecorator
     {
-        Beverage beverage;
+        private Beverage beverage;
 
         public Mocha(Beverage beverage)
         {

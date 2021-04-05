@@ -4,9 +4,9 @@ using System.Text;
 
 namespace StarBuzz.decorators
 {
-    class Whip:CondinmentDecorator
+    class Whip:CondimentDecorator
     {
-        Beverage beverage;
+        private Beverage beverage;
 
         public Whip(Beverage beverage)
         {
