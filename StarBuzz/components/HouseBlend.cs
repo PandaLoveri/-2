@@ -13,7 +13,7 @@ namespace StarBuzz.components
 
         public override double cost()
         {
-            return 0.89;
+            return PriceList.houseBlendPrice;
         }
     }
 }

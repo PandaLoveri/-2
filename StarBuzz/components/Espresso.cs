@@ -13,7 +13,7 @@ namespace StarBuzz.components
 
         public override double cost()
         {
-            return 1.99;
+            return PriceList.espressoPrice;
         }
     }
 }

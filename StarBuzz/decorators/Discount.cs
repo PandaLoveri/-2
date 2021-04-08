@@ -20,7 +20,7 @@ namespace StarBuzz.decorators
 
         public override double cost()
         {
-            return Math.Round(beverage.cost() * (100 - 20) / 100, 2);
+            return Math.Round(beverage.cost() * (100 - PriceList.discount) / 100, 2);
         }
     }
 }

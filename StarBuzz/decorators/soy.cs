@@ -20,7 +20,7 @@ namespace StarBuzz.decorators
 
         public override double cost()
         {
-            return 0.10 + beverage.cost();
+            return PriceList.soyPrice + beverage.cost();
         }
     }
 }
