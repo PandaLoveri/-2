@@ -15,9 +15,18 @@ namespace StarBuzz.decorators
 
         public override string getDescription()
         {
-            if (beverage.getDescription().Contains("Mocha"))
-                return beverage.getDescription().Replace("Mocha", "Double Mocha");
-            return beverage.getDescription() + ", Mocha";
+            return beverage.getDescription();
+        }
+
+        public override Dictionary<string, int> getCondiments()
+        {
+            Dictionary<string, int> temp = beverage.getCondiments();
+            if (!temp.ContainsKey(Description.mocha))
+            {
+                temp.Add(Description.mocha, 0);
+            }
+            temp[Description.mocha]++;
+            return temp;
         }
 
         public override double cost()

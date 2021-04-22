@@ -8,7 +8,7 @@ namespace StarBuzz.components
     {
         public IceTea()
         {
-            description = "IceTea";
+            description = Description.iceTea;
         }
 
         public override double cost()

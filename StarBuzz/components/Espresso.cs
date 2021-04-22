@@ -8,7 +8,7 @@ namespace StarBuzz.components
     {
         public Espresso()
         {
-            description = "Espresso";
+            description = Description.espresso;
         }
 
         public override double cost()

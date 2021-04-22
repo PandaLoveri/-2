@@ -8,7 +8,7 @@ namespace StarBuzz.components
     {
         public Decaf()
         {
-            description = "Decaf";
+            description = Description.decaf;
         }
 
         public override double cost()

@@ -8,7 +8,7 @@ namespace StarBuzz.components
     {
         public DarkRoast()
         {
-            description = "DarkRoast";
+            description = Description.darkRoast;
         }
 
         public override double cost()

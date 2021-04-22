@@ -12,10 +12,21 @@ namespace StarBuzz.decorators
         {
             this.beverage = beverage;
         }
-
+               
         public override string getDescription()
         {
-            return beverage.getDescription() + ", Сaramel";
+            return beverage.getDescription();
+        }
+
+        public override Dictionary<string, int> getCondiments()
+        {
+            Dictionary<string, int> temp = beverage.getCondiments();
+            if (!temp.ContainsKey(Description.caramel))
+            {
+                temp.Add(Description.caramel, 0);
+            }
+            temp[Description.caramel]++;            
+            return temp;
         }
 
         public override double cost()
